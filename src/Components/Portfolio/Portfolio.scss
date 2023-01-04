@@ -1,0 +1,13 @@
+.portfolio {
+  margin: 0 20vw;
+
+  p {
+    font-size: 0.9rem;
+  }
+
+  .cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}

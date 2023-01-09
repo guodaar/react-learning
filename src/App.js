@@ -26,36 +26,24 @@ function App() {
         button="Button"
       />
       <Portfolio title="Portfolio" description={description}>
-        <ItemCard
-          cardImage={cardImageOne}
-          cardImageAlt={imageAltOne}
-          caption={captionOne}
-        />
-        <ItemCard
-          cardImage={cardImageOne}
-          cardImageAlt={imageAltOne}
-          caption={captionOne}
-        />
-        <ItemCard
-          cardImage={cardImageOne}
-          cardImageAlt={imageAltOne}
-          caption={captionOne}
-        />
-        <ItemCard
-          cardImage={cardImageTwo}
-          cardImageAlt={imageAltTwo}
-          caption={captionTwo}
-        />
-        <ItemCard
-          cardImage={cardImageTwo}
-          cardImageAlt={imageAltTwo}
-          caption={captionTwo}
-        />
-        <ItemCard
-          cardImage={cardImageTwo}
-          cardImageAlt={imageAltTwo}
-          caption={captionTwo}
-        />
+        {[...Array(3)].map((card) => {
+          return (
+            <ItemCard
+              cardImage={cardImageOne}
+              cardImageAlt={imageAltOne}
+              caption={captionOne}
+            />
+          );
+        })}
+        {[...Array(3)].map((card) => {
+          return (
+            <ItemCard
+              cardImage={cardImageTwo}
+              cardImageAlt={imageAltTwo}
+              caption={captionTwo}
+            />
+          );
+        })}
       </Portfolio>
     </div>
   );
